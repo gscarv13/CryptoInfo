@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../store/store';
-import Navigation from './Navigation';
-import Home from '../views/Home';
+import store from './store/store';
+import Navigation from './components/Navigation';
+import CoinInfo from './components/CoinInfo';
+import Home from './views/Home';
 
 const App = () => (
   <Provider store={store}>
@@ -11,6 +12,7 @@ const App = () => (
         <Navigation />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/info/:coin" component={CoinInfo} />
         </Switch>
       </Router>
     </div>
