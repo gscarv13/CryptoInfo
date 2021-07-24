@@ -20,12 +20,6 @@ const Home = (props) => {
         <h1>The Best Crypto Currency Website</h1>
         <h3>Get the latest and updated info on your favourite assets</h3>
       </div>
-      <div>
-        {console.log(cryptoCoins)}
-      </div>
-      <div>
-        {console.log(fiats)}
-      </div>
     </div>
   );
 };
@@ -33,8 +27,13 @@ const Home = (props) => {
 Home.propTypes = {
   fetchCryptoInfo: PropTypes.func.isRequired,
   fetchFiatCurrencies: PropTypes.func.isRequired,
-  cryptoCoins: PropTypes.objectOf(PropTypes.object).isRequired,
-  fiats: PropTypes.objectOf(PropTypes.object).isRequired,
+  cryptoCoins: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.object)),
+  fiats: PropTypes.arrayOf(PropTypes.object),
+};
+
+Home.defaultProps = {
+  cryptoCoins: { coins: [{}] },
+  fiats: [{}],
 };
 
 const mapStateToProps = (state) => ({
