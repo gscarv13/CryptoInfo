@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import LineChart from './LineChart';
 
 const CoinInfo = (props) => {
   const { match, location } = props;
@@ -15,7 +16,9 @@ const CoinInfo = (props) => {
         <span>{coinObject.price}</span>
       </div>
       <div>
-        <div> Chart goes here </div>
+        <div>
+          <LineChart />
+        </div>
         <div>
           <p>
             price BTC:
