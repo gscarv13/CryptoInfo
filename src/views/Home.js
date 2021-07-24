@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchCryptoInfo, fetchFiatCurrencies } from '../actions/fetchActions';
+import { fetchCryptoInfo, fetchFiatCurrencies } from '../store/actions/fetchActions';
+import CoinList from '../components/CoinList';
 
 const Home = (props) => {
   const {
@@ -20,6 +21,7 @@ const Home = (props) => {
         <h1>The Best Crypto Currency Website</h1>
         <h3>Get the latest and updated info on your favourite assets</h3>
       </div>
+      <CoinList coins={cryptoCoins.coins} />
     </div>
   );
 };
