@@ -1,12 +1,12 @@
+import FiatCurrencySelector from './FiatCurrencySelector';
+
 const Navigation = () => (
   <nav>
     <div>
       <span>CryptoInfo</span>
       <button type="button">HOME</button>
       <button type="button">ABOUT</button>
-      <select>
-        <option value="CURRENCY">CURRENCY</option>
-      </select>
+      <FiatCurrencySelector />
     </div>
   </nav>
 );
