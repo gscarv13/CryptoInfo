@@ -13,6 +13,7 @@ const Home = (props) => {
 
   useState(fetchCryptoInfo);
   useState(fetchFiatCurrencies);
+  console.log(cryptoCoins.coins[0]);
   return (
     <div>
       <div>
