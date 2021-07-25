@@ -11,6 +11,7 @@ const LineChart = (props) => {
     ],
   };
   const [data, setData] = useState(initialState);
+
   const getHistory = async (coinId) => {
     const res = await axios.get(`https://api.coinstats.app/public/v1/charts?period=1m&coinId=${coinId}`);
     const usdPrices = res.data.chart.map((array) => array[1]);
@@ -25,6 +26,7 @@ const LineChart = (props) => {
         {
           label: 'CURRENCY PRICE IN USD',
           data: usdPrices,
+          borderColor: '#ff922f',
         },
       ],
     };
@@ -37,8 +39,14 @@ const LineChart = (props) => {
   }, [coinId]);
 
   return (
-    <div>
-      <Line data={data} />
+    <div style={{
+      border: '1px solid #fff',
+      borderRadius: '8px',
+      padding: '10px',
+      backgroundColor: '#e5e4e8',
+    }}
+    >
+      <Line data={data} dark tooltip />
     </div>
   );
 };
