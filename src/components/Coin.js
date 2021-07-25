@@ -1,4 +1,21 @@
 import PropTypes from 'prop-types';
+import style from '../assets/stylesheet/Coin.module.css';
+
+const changePriceColor = (valueInput) => {
+  let color = null;
+  let value = `${valueInput} %`;
+  if (value === '0') {
+    color = '#fff';
+  } else if (value.charAt(0) === '-') {
+    color = '#cd1e0e';
+    value = value.replace(value[0], '- ');
+  } else {
+    value = `+ ${valueInput} %`;
+    color = '#83d332';
+  }
+
+  return { value, color };
+};
 
 const Coin = (props) => {
   const {
@@ -11,19 +28,24 @@ const Coin = (props) => {
     link,
   } = props;
 
+  const priceObject = changePriceColor(priceChange);
+  const priceHuman = Number.parseFloat(price).toFixed(2);
+
   return (
     <tr>
-      <td>{rank}</td>
-      <td>
+      <td>{`${rank}#`}</td>
+      <td className={style.CoinContainer}>
         <img src={icon} alt={`${name} icon`} />
-        *
-        {name}
-        *
-        {symbol}
+        <div className={style.CoinDetailContainer}>
+          <p>{name}</p>
+          <p className={style.CoinSym}>{symbol}</p>
+        </div>
       </td>
-      <td>{priceChange}</td>
-      <td>{price}</td>
-      <td>{link}</td>
+      <td style={{ color: priceObject.color }}>{priceObject.value}</td>
+      <td>{priceHuman}</td>
+      <td>
+        <div className={style.Link}>{link}</div>
+      </td>
     </tr>
   );
 };

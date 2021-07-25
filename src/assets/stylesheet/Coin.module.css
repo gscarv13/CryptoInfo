@@ -1,0 +1,30 @@
+td img {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.CoinContainer {
+  display: flex;
+  align-items: center;
+  margin: -1px;
+}
+
+.CoinDetailContainer {
+  text-align: left;
+}
+
+.CoinSym {
+  font-size: 12px;
+  color: #545a7c;
+}
+
+td a {
+  border-radius: 15px;
+  border: 1px solid #545a7c;
+  padding: 5px 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #9ca5d3;
+}

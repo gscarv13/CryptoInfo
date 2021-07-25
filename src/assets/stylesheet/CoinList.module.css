@@ -2,6 +2,7 @@ table {
   width: 100%;
   border: 1px solid #545a7c;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 tr td {

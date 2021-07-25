@@ -11,7 +11,7 @@ const CoinList = (props) => {
         <tr className={style.Header}>
           <td>Rank</td>
           <td>Coin</td>
-          <td>Price Change</td>
+          <td>Price Change 24H</td>
           <td>Price</td>
           <td>More info</td>
         </tr>
@@ -29,7 +29,7 @@ const CoinList = (props) => {
             link={
               (
                 <Link to={{ pathname: `/info/${coin.name}`, state: { coin } }}>
-                  asdasd
+                  DETAILS
                 </Link>
               )
             }
