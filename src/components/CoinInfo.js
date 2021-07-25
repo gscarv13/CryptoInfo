@@ -1,4 +1,3 @@
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import LineChart from './LineChart';
 
@@ -57,4 +56,4 @@ CoinInfo.propTypes = {
   match: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
-export default connect()(CoinInfo);
+export default CoinInfo;
