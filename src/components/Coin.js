@@ -4,14 +4,15 @@ import style from '../assets/stylesheet/Coin.module.css';
 const changePriceColor = (valueInput) => {
   let color = null;
   let value = `${valueInput} %`;
+
   if (value === '0') {
     color = '#fff';
   } else if (value.charAt(0) === '-') {
-    color = '#cd1e0e';
+    color = '#dd2d58';
     value = value.replace(value[0], '- ');
   } else {
     value = `+ ${valueInput} %`;
-    color = '#83d332';
+    color = '#9cf321';
   }
 
   return { value, color };

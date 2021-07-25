@@ -12,10 +12,10 @@
 }
 
 .FiatCurrencySelector select {
-  border: 2px solid #f9635c;
+  border: 2px solid #ff922f;
   border-radius: 8px;
   padding: 3px;
-  background-color: #19163f;
+  background-color: #1a1b24;
   color: white;
   margin-left: 10px;
 }
@@ -26,6 +26,6 @@
 }
 
 .current {
-  color: #f9635c;
+  color: #ff922f;
   margin-right: 10px;
 }

@@ -7,7 +7,6 @@ td img {
 .CoinContainer {
   display: flex;
   align-items: center;
-  margin: -1px;
 }
 
 .CoinDetailContainer {
@@ -16,15 +15,15 @@ td img {
 
 .CoinSym {
   font-size: 12px;
-  color: #545a7c;
+  color: #34353e;
 }
 
 td a {
   border-radius: 15px;
-  border: 1px solid #545a7c;
+  border: 1px solid #34353e;
   padding: 5px 8px;
   text-decoration: none;
   font-weight: bold;
   font-size: 12px;
-  color: #9ca5d3;
+  color: #e5e4e8;
 }

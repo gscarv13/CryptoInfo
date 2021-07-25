@@ -1,5 +1,5 @@
 nav {
-  color: #9ca5d3;
+  color: #e5e4e8;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,7 +12,7 @@ button {
   border: none;
   background-color: inherit;
   margin-right: 10px;
-  color: #f73c34;
+  color: #ff922f;
   font-weight: bold;
 }
 
