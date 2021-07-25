@@ -1,0 +1,22 @@
+.Main {
+  padding: 0 50px;
+}
+
+.Hero {
+  height: 30rem;
+  display: flex;
+  align-items: center;
+}
+
+.HeroRight {
+  width: 50%;
+}
+
+.HeroRight h1 {
+  font-size: 50px;
+}
+
+.HeroRight h3 {
+  font-size: 30px;
+  font-weight: normal;
+}
