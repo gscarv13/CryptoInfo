@@ -1,11 +1,18 @@
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchFiatCurrencies } from '../store/actions/fetchActions';
+import { fetchFiatCurrencies, fetchCryptoInfo } from '../store/actions/fetchActions';
 import currentFiatAction from '../store/actions/currentFiat';
 
 const FiatCurrencySelector = (props) => {
-  const { fiats, currentFiat, fetchFiatCurrencies } = props;
+  const {
+    fiats,
+    currentFiat,
+    fetchFiatCurrencies,
+    currentFiatAction,
+    fetchCryptoInfo,
+  } = props;
+
   useState(fetchFiatCurrencies);
 
   const handleSelect = (e) => {
@@ -15,7 +22,8 @@ const FiatCurrencySelector = (props) => {
       .filter((item) => item.name === e.target.value)
       .pop();
 
-    props.currentFiatAction(current);
+    currentFiatAction(current);
+    fetchCryptoInfo(current.name);
   };
 
   return (
@@ -45,6 +53,7 @@ FiatCurrencySelector.propTypes = {
   currentFiat: PropTypes.objectOf(PropTypes.string),
   currentFiatAction: PropTypes.func.isRequired,
   fetchFiatCurrencies: PropTypes.func.isRequired,
+  fetchCryptoInfo: PropTypes.func.isRequired,
 };
 
 FiatCurrencySelector.defaultProps = {
@@ -64,6 +73,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
   fetchFiatCurrencies,
+  fetchCryptoInfo,
   currentFiatAction,
 };
 

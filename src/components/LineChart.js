@@ -4,13 +4,13 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 const LineChart = (props) => {
-  const initailState = {
+  const initialState = {
     labels: ['a', 'b'],
     datasets: [
       { label: 'test', data: [1, 2] },
     ],
   };
-  const [data, setData] = useState(initailState);
+  const [data, setData] = useState(initialState);
   const getHistory = async (coinId) => {
     const res = await axios.get(`https://api.coinstats.app/public/v1/charts?period=1m&coinId=${coinId}`);
     const usdPrices = res.data.chart.map((array) => array[1]);
@@ -23,7 +23,7 @@ const LineChart = (props) => {
       labels: dates,
       datasets: [
         {
-          label: 'currency price in USD',
+          label: 'CURRENCY PRICE IN USD',
           data: usdPrices,
         },
       ],
