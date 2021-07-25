@@ -1,13 +1,14 @@
 import FiatCurrencySelector from './FiatCurrencySelector';
+import style from '../assets/stylesheet/Navigation.module.css';
 
 const Navigation = () => (
   <nav>
-    <div>
-      <span>CryptoInfo</span>
+    <div className={style.navItems}>
+      <span className={style.logo}>CryptoInfo</span>
       <button type="button">HOME</button>
       <button type="button">ABOUT</button>
-      <FiatCurrencySelector />
     </div>
+    <FiatCurrencySelector />
   </nav>
 );
 

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchFiatCurrencies, fetchCryptoInfo } from '../store/actions/fetchActions';
 import currentFiatAction from '../store/actions/currentFiat';
+import style from '../assets/stylesheet/FiatCurrencySelector.module.css';
 
 const FiatCurrencySelector = (props) => {
   const {
@@ -27,10 +28,12 @@ const FiatCurrencySelector = (props) => {
   };
 
   return (
-    <div>
-      <span>Current Currency</span>
-      <img src={currentFiat.imageUrl} alt="Fiat currency symbol" />
-      <span>{currentFiat.name}</span>
+    <div className={style.FiatCurrencySelector}>
+      <span className={style.current}>CURRENCY</span>
+      <div className={style.icon}>
+        <img src={currentFiat.imageUrl} alt="Fiat currency symbol" />
+        <span>{currentFiat.name}</span>
+      </div>
       <div>
         <select onClick={handleSelect}>
           <option value="">Select...</option>

@@ -30,10 +30,12 @@ const LineChart = (props) => {
     };
     setData(dataRes);
   };
+
   const { coinId } = props;
   useEffect(() => {
     getHistory(coinId);
-  }, []);
+  }, [coinId]);
+
   return (
     <div>
       <Line data={data} />
@@ -43,8 +45,6 @@ const LineChart = (props) => {
 
 LineChart.propTypes = {
   coinId: PropTypes.string,
-  // dates: PropTypes.array.isRequired,
-  // values: PropTypes.array.isRequired,
 };
 
 LineChart.defaultProps = {

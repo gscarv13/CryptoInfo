@@ -16,7 +16,7 @@ const CoinInfo = (props) => {
       </div>
       <div>
         <div>
-          <LineChart />
+          <LineChart coinId={coinObject.id} />
         </div>
         <div>
           <p>

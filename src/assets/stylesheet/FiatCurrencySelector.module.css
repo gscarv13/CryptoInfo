@@ -1,0 +1,31 @@
+.FiatCurrencySelector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+}
+
+.FiatCurrencySelector img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.FiatCurrencySelector select {
+  border: 2px solid #f9635c;
+  border-radius: 8px;
+  padding: 3px;
+  background-color: #19163f;
+  color: white;
+  margin-left: 10px;
+}
+
+.icon {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.current {
+  color: #f9635c;
+  margin-right: 10px;
+}
