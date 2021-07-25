@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+  border: 1px solid #545a7c;
+  border-collapse: collapse;
+}
+
+tr td {
+  border-bottom: #545a7c 1px solid;
+  padding: 15px;
+  text-align: center;
+}
+
+thead tr {
+  background-color: #090b32;
+}
+
+.Header {
+  text-align: center;
+  height: 4rem;
+  font-size: 13px;
+}
+
+tr:hover {
+  background-color: #090b32;
+}

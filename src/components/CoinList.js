@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Coin from './Coin';
+import style from '../assets/stylesheet/CoinList.module.css';
 
 const CoinList = (props) => {
   const { coins } = props;
   return (
     <table>
       <thead>
-        <tr>
+        <tr className={style.Header}>
           <td>Rank</td>
           <td>Coin</td>
           <td>Price Change</td>
