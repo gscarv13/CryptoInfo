@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchFiatCurrencies, fetchCryptoInfo } from '../store/actions/fetchActions';
@@ -13,6 +14,7 @@ const FiatCurrencySelector = (props) => {
     currentFiatAction,
     fetchCryptoInfo,
   } = props;
+  const location = useLocation();
 
   useState(fetchFiatCurrencies);
 
@@ -31,14 +33,10 @@ const FiatCurrencySelector = (props) => {
     fetchCryptoInfo(current.name);
   };
 
-  return (
-    <div className={style.FiatCurrencySelector}>
-      <span className={style.current}>CURRENCY</span>
-      <div className={style.icon}>
-        <img src={currentFiat.imageUrl} alt="Fiat currency symbol" />
-        <span>{currentFiat.name}</span>
-      </div>
-      <div>
+  const checkLocation = (location) => {
+    let result = null;
+    if (!location.pathname.match(/Info/gi)) {
+      result = (
         <select onClick={handleSelect}>
           <option value="">Select...</option>
           {fiats.map((item) => (
@@ -50,6 +48,20 @@ const FiatCurrencySelector = (props) => {
             </option>
           ))}
         </select>
+      );
+    }
+    return result;
+  };
+
+  return (
+    <div className={style.FiatCurrencySelector}>
+      <span className={style.current}>CURRENCY</span>
+      <div className={style.icon}>
+        <img src={currentFiat.imageUrl} alt="Fiat currency symbol" />
+        <span>{currentFiat.name}</span>
+      </div>
+      <div>
+        {checkLocation(location)}
       </div>
     </div>
   );
