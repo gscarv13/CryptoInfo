@@ -58,7 +58,7 @@ Coin.propTypes = {
   symbol: PropTypes.string,
   priceChange: PropTypes.number,
   price: PropTypes.number,
-  link: PropTypes.string,
+  link: PropTypes.element,
 };
 
 Coin.defaultProps = {
@@ -68,7 +68,7 @@ Coin.defaultProps = {
   symbol: 'symbol',
   priceChange: 1,
   price: 1,
-  link: '',
+  link: (<a href="https://localhost:3000">Link</a>),
 };
 
 export default Coin;

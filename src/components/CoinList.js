@@ -19,7 +19,7 @@ const CoinList = (props) => {
       <tbody>
         {coins.map((coin) => (
           <Coin
-            key={coin}
+            key={`${coin.rank}${coin.id}`}
             rank={coin.rank}
             icon={coin.icon}
             name={coin.name}
