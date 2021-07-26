@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import LineChart from '../components/LineChart';
 import style from '../assets/stylesheet/CoinInfo.module.css';
 
 const CoinInfo = (props) => {
-  const { match, location } = props;
+  const { match, location, currentFiat } = props;
   const coinName = match.params.coin;
   const coinObject = location.state.coin;
 
@@ -16,8 +17,8 @@ const CoinInfo = (props) => {
         </div>
         <div className={style.PriceUsdContainer}>
           <span>
-            {`$ ${coinObject.price.toFixed(2)} `}
-            <span className={style.USD}>USD</span>
+            {`${currentFiat.symbol} ${coinObject.price.toFixed(2)} `}
+            <span className={style.USD}>{currentFiat.name}</span>
           </span>
         </div>
       </div>
@@ -88,6 +89,18 @@ const CoinInfo = (props) => {
 CoinInfo.propTypes = {
   location: PropTypes.objectOf(PropTypes.object).isRequired,
   match: PropTypes.objectOf(PropTypes.object).isRequired,
+  currentFiat: PropTypes.objectOf(PropTypes.string),
 };
 
-export default CoinInfo;
+CoinInfo.defaultProps = {
+  currentFiat: {
+    symbol: '$',
+    name: 'USD',
+  },
+};
+
+const mapStateToProps = (state) => ({
+  currentFiat: state.currentFiat.currentFiat,
+});
+
+export default connect(mapStateToProps, null)(CoinInfo);
