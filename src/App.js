@@ -4,6 +4,7 @@ import store from './store/store';
 import Navigation from './components/Navigation';
 import CoinInfo from './views/CoinInfo';
 import Home from './views/Home';
+import Footer from './components/Footer';
 
 const App = () => (
   <Provider store={store}>
@@ -14,6 +15,7 @@ const App = () => (
           <Route exact path="/" component={Home} />
           <Route exact path="/info/:coin" component={CoinInfo} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   </Provider>

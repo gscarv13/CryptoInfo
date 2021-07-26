@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 5px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.GithubNick {
+  color: #ff922f;
+}
