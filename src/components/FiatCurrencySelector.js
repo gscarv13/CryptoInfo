@@ -37,11 +37,11 @@ const FiatCurrencySelector = (props) => {
     let result = null;
     if (!location.pathname.match(/Info/gi)) {
       result = (
-        <select onClick={handleSelect}>
+        <select onClick={handleSelect} data-testid="fiat-select">
           <option value="">Select...</option>
           {fiats.map((item) => (
             <option
-              key={item.name}
+              key={`${item.symbol}${item.name}`}
               value={item.name}
             >
               {item.name}

@@ -6,7 +6,7 @@ import style from '../assets/stylesheet/CoinList.module.css';
 const CoinList = (props) => {
   const { coins } = props;
   return (
-    <table>
+    <table data-testid="coin-list">
       <thead>
         <tr className={style.Header}>
           <td>Rank</td>
