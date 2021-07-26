@@ -26,6 +26,8 @@ const CoinInfo = (props) => {
         <div className={style.Chart}>
           <LineChart
             coinId={coinObject.id}
+            coinName={coinObject.name}
+            fiatName={currentFiat.name}
             options={{ maintainAspectRatio: false }}
           />
         </div>
