@@ -32,3 +32,13 @@ body {
 canvas {
   background-color: #1a1b24;
 }
+
+a {
+  color: #e5e4e8;
+  text-decoration: none;
+}
+
+a i:hover,
+a:hover {
+  color: #ff922f;
+}

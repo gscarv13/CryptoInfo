@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import LineChart from './LineChart';
+import LineChart from '../components/LineChart';
 import style from '../assets/stylesheet/CoinInfo.module.css';
 
 const CoinInfo = (props) => {
