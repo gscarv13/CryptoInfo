@@ -1,20 +1,26 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchCryptoInfo } from '../store/actions/fetchActions';
 import CoinList from '../components/CoinList';
 import style from '../assets/stylesheet/Home.module.css';
 import bg from '../assets/images/chart.png';
 
 const Home = (props) => {
   const {
-    fetchFiatCurrencies,
-    fetchCryptoInfo,
     cryptoCoins,
+    currentFiat,
   } = props;
+  // useState(fetchCryptoInfo);
 
-  useState(fetchCryptoInfo);
-  useState(fetchFiatCurrencies);
+  // useEffect(() => {
+  //   fetchFiatCurrencies();
+  // }, []);
+
+  useEffect(() => {
+    // fetchCryptoInfo();
+  });
+
+  console.log(currentFiat);
 
   return (
     <div className={style.Main}>
@@ -33,9 +39,8 @@ const Home = (props) => {
 };
 
 Home.propTypes = {
-  fetchCryptoInfo: PropTypes.func.isRequired,
-  fetchFiatCurrencies: PropTypes.func.isRequired,
   cryptoCoins: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.object)),
+  currentFiat: PropTypes.string.isRequired,
 };
 
 Home.defaultProps = {
@@ -44,6 +49,7 @@ Home.defaultProps = {
 
 const mapStateToProps = (state) => ({
   cryptoCoins: state.fetchObject.cryptoCoins.data,
+  currentFiat: state.currentFiat.currentFiat,
 });
 
-export default connect(mapStateToProps, { fetchCryptoInfo })(Home);
+export default connect(mapStateToProps, null)(Home);

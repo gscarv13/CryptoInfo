@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchFiatCurrencies, fetchCryptoInfo } from '../store/actions/fetchActions';
@@ -15,6 +15,10 @@ const FiatCurrencySelector = (props) => {
   } = props;
 
   useState(fetchFiatCurrencies);
+
+  useEffect(() => {
+    fetchCryptoInfo();
+  }, []);
 
   const handleSelect = (e) => {
     if (e.target.value === '') return;
