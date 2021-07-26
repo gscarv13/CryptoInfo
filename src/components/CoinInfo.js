@@ -15,7 +15,10 @@ const CoinInfo = (props) => {
           <h1>{coinName}</h1>
         </div>
         <div className={style.PriceUsdContainer}>
-          <span>{`$ ${coinObject.price.toFixed(2)}`}</span>
+          <span>
+            {`$ ${coinObject.price.toFixed(2)} `}
+            <span className={style.USD}>USD</span>
+          </span>
         </div>
       </div>
       <div className={style.Main}>
@@ -66,10 +69,15 @@ const CoinInfo = (props) => {
               </tbody>
             </table>
           </div>
-          <div className="links">
+          <div className={style.Links}>
             <h4>Useful Links</h4>
-            <a href={coinObject.twitterUrl}> twitter </a>
-            <a href={coinObject.websiteUrl}> website </a>
+            <a href={coinObject.twitterUrl} target="_blank" rel="noreferrer">
+              <i className="fab fa-twitter-square"> Twitter </i>
+            </a>
+            <br />
+            <a href={coinObject.websiteUrl} target="_blank" rel="noreferrer">
+              <i className="fas fa-globe"> Official Website </i>
+            </a>
           </div>
         </div>
       </div>

@@ -33,6 +33,26 @@ const LineChart = (props) => {
     setData(dataRes);
   };
 
+  const options = {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+        text: 'Price of Coin in the last 30 days',
+        color: '#fff',
+        fontsize: '42px',
+      },
+    },
+    scales: {
+      y: {
+        grid: {
+          drawBorder: false,
+          color: '#555',
+        },
+      },
+    },
+  };
+
   const { coinId } = props;
   useEffect(() => {
     getHistory(coinId);
@@ -40,13 +60,13 @@ const LineChart = (props) => {
 
   return (
     <div style={{
-      border: '1px solid #fff',
+      border: '1px solid #1a1b24',
       borderRadius: '8px',
       padding: '10px',
-      backgroundColor: '#e5e4e8',
+      backgroundColor: '#1a1b24',
     }}
     >
-      <Line data={data} dark tooltip />
+      <Line data={data} options={options} tooltip />
     </div>
   );
 };

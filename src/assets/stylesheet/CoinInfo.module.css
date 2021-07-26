@@ -13,6 +13,10 @@
   width: 12rem;
 }
 
+.USD {
+  font-size: 10px;
+}
+
 .CoinInfoContainer {
   width: 100%;
   padding: 0 100px;
@@ -56,4 +60,22 @@ h4 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.PriceUsdContainer {
+  font-size: 32px;
+}
+
+.Links a {
+  color: #e5e4e8;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.Links a i {
+  margin-left: 5px;
+}
+
+.Links a i:hover, .Links a:hover {
+  color: #ff922f;
 }
