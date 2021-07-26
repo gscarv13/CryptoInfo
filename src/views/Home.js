@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import CoinList from '../components/CoinList';
@@ -8,19 +7,7 @@ import bg from '../assets/images/chart.png';
 const Home = (props) => {
   const {
     cryptoCoins,
-    currentFiat,
   } = props;
-  // useState(fetchCryptoInfo);
-
-  // useEffect(() => {
-  //   fetchFiatCurrencies();
-  // }, []);
-
-  useEffect(() => {
-    // fetchCryptoInfo();
-  });
-
-  console.log(currentFiat);
 
   return (
     <div className={style.Main}>
@@ -40,7 +27,6 @@ const Home = (props) => {
 
 Home.propTypes = {
   cryptoCoins: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.object)),
-  currentFiat: PropTypes.string.isRequired,
 };
 
 Home.defaultProps = {
@@ -49,7 +35,6 @@ Home.defaultProps = {
 
 const mapStateToProps = (state) => ({
   cryptoCoins: state.fetchObject.cryptoCoins.data,
-  currentFiat: state.currentFiat.currentFiat,
 });
 
 export default connect(mapStateToProps, null)(Home);
