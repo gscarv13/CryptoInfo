@@ -23,7 +23,7 @@ const CoinInfo = (props) => {
         </div>
       </div>
       <div className={style.Main}>
-        <div className={style.Chart}>
+        <div className={style.Chart} data-testid="chart">
           <LineChart
             coinId={coinObject.id}
             coinName={coinObject.name}

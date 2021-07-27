@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './store/store';
+import store from './redux/store';
 import Navigation from './components/Navigation';
 import CoinInfo from './views/CoinInfo';
 import Home from './views/Home';

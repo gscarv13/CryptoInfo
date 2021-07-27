@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchFiatCurrencies, fetchCryptoInfo } from '../store/actions/fetchActions';
-import currentFiatAction from '../store/actions/currentFiat';
+import { fetchFiatCurrencies, fetchCryptoInfo } from '../redux/actions/fetchActions';
+import currentFiatAction from '../redux/actions/currentFiat';
 import style from '../assets/stylesheet/FiatCurrencySelector.module.css';
 
 const FiatCurrencySelector = (props) => {

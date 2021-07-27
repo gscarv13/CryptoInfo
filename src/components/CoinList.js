@@ -28,7 +28,7 @@ const CoinList = (props) => {
             price={coin.price}
             link={
               (
-                <Link to={{ pathname: `/info/${coin.name}`, state: { coin } }}>
+                <Link to={{ pathname: `/info/${coin.name}`, state: { coin } }} data-testid={`crypto-link-${coin.rank}`}>
                   DETAILS
                 </Link>
               )

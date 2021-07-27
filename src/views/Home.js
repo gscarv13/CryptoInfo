@@ -5,10 +5,7 @@ import style from '../assets/stylesheet/Home.module.css';
 import bg from '../assets/images/chart.png';
 
 const Home = (props) => {
-  const {
-    cryptoCoins,
-  } = props;
-
+  const { cryptoCoins } = props;
   return (
     <div className={style.Main}>
       <div className={style.Hero}>
@@ -30,7 +27,18 @@ Home.propTypes = {
 };
 
 Home.defaultProps = {
-  cryptoCoins: { coins: [{}] },
+  cryptoCoins: {
+    coins: [
+      {
+        rank: 1,
+        icon: 'icon',
+        name: 'CICoin',
+        symbol: '$$',
+        priceChange: 1,
+        price: 1,
+      },
+    ],
+  },
 };
 
 const mapStateToProps = (state) => ({

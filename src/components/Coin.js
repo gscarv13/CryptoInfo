@@ -52,23 +52,13 @@ const Coin = (props) => {
 };
 
 Coin.propTypes = {
-  rank: PropTypes.number,
-  icon: PropTypes.string,
-  name: PropTypes.string,
-  symbol: PropTypes.string,
-  priceChange: PropTypes.number,
-  price: PropTypes.number,
-  link: PropTypes.element,
-};
-
-Coin.defaultProps = {
-  rank: 1,
-  icon: 'icon',
-  name: 'name',
-  symbol: 'symbol',
-  priceChange: 1,
-  price: 1,
-  link: (<a href="https://localhost:3000">Link</a>),
+  rank: PropTypes.number.isRequired,
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  symbol: PropTypes.string.isRequired,
+  priceChange: PropTypes.number.isRequired,
+  price: PropTypes.number.isRequired,
+  link: PropTypes.element.isRequired,
 };
 
 export default Coin;
