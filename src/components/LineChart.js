@@ -39,7 +39,7 @@ const LineChart = (props) => {
 
   return (
     <div style={{
-      border: '1px solid #1a1b24',
+      border: '1px solid #aaa',
       borderRadius: '8px',
       padding: '10px',
       backgroundColor: '#1a1b24',

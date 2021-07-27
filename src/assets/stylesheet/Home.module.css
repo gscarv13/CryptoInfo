@@ -5,12 +5,25 @@
 .Hero {
   height: 30rem;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
+.Hero:before {
+  content: ' ';
+  z-index: -100;
+  display: block;
+  position: absolute;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/chart.png");
+  background-position: 80% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .HeroRight {
-  width: 50%;
+  max-width: 60%;
 }
 
 .HeroRight h1 {

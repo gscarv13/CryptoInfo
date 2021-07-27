@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import CoinList from '../components/CoinList';
 import style from '../assets/stylesheet/Home.module.css';
-import bg from '../assets/images/chart.png';
 
 const Home = (props) => {
   const { cryptoCoins } = props;
@@ -13,9 +12,7 @@ const Home = (props) => {
           <h1>The Best Crypto Currency Website</h1>
           <h3>Get the latest and updated info on your favourite assets</h3>
         </div>
-        <div>
-          <img src={bg} alt="" />
-        </div>
+        <div />
       </div>
       <CoinList coins={cryptoCoins.coins} />
     </div>
