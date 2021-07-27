@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const getHistory = async (coinId, callback, coin, fiat) => {
+const getHistory = async (coinId, callback, coin) => {
   const res = await axios.get(`https://api.coinstats.app/public/v1/charts?period=1m&coinId=${coinId}`);
   const usdPrices = res.data.chart.map((array) => array[1]);
   const UNIXDates = res.data.chart.map((array) => array[0]);
@@ -12,7 +12,7 @@ const getHistory = async (coinId, callback, coin, fiat) => {
     labels: dates,
     datasets: [
       {
-        label: `${coin.toUpperCase()} PRICE IN ${fiat.toUpperCase()}`,
+        label: `${coin.toUpperCase()} PRICE IN USD`,
         data: usdPrices,
         borderColor: '#ff922f',
       },
