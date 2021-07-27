@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -16,9 +16,8 @@ const FiatCurrencySelector = (props) => {
   } = props;
   const location = useLocation();
 
-  useState(fetchFiatCurrencies);
-
   useEffect(() => {
+    fetchFiatCurrencies();
     fetchCryptoInfo();
   }, []);
 

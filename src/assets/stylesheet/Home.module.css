@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.Hero:before {
+.Hero::before {
   content: ' ';
   z-index: -100;
   display: block;
