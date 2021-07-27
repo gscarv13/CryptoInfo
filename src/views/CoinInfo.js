@@ -2,11 +2,15 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import LineChart from '../components/LineChart';
 import style from '../assets/stylesheet/CoinInfo.module.css';
+import changePriceColor from '../helpers/changePriceColor';
 
 const CoinInfo = (props) => {
   const { match, location, currentFiat } = props;
   const coinName = match.params.coin;
   const coinObject = location.state.coin;
+  const price1h = changePriceColor(coinObject.priceChange1h);
+  const price1d = changePriceColor(coinObject.priceChange1d);
+  const price1w = changePriceColor(coinObject.priceChange1w);
 
   return (
     <div className={style.CoinInfoContainer}>
@@ -59,15 +63,15 @@ const CoinInfo = (props) => {
               <tbody>
                 <tr>
                   <td>1H: </td>
-                  <td>{coinObject.priceChange1h}</td>
+                  <td style={{ color: price1h.color }}>{price1h.value}</td>
                 </tr>
                 <tr>
-                  <td>1D: </td>
-                  <td>{coinObject.priceChange1d}</td>
+                  <td>24H: </td>
+                  <td style={{ color: price1d.color }}>{price1d.value}</td>
                 </tr>
                 <tr>
-                  <td>1W: </td>
-                  <td>{coinObject.priceChange1w}</td>
+                  <td>7 Days: </td>
+                  <td style={{ color: price1w.color }}>{price1w.value}</td>
                 </tr>
               </tbody>
             </table>
