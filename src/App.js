@@ -4,6 +4,7 @@ import store from './redux/store';
 import Navigation from './components/Navigation';
 import CoinInfo from './views/CoinInfo';
 import Home from './views/Home';
+import News from './views/News';
 import Footer from './components/Footer';
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/info/:coin" component={CoinInfo} />
+          <Route exact path="/news" component={News} />
         </Switch>
         <Footer />
       </Router>

@@ -8,21 +8,13 @@ nav {
   padding: 0 50px;
 }
 
-button {
-  border: none;
-  background-color: inherit;
-  margin-right: 10px;
-  color: #ff922f;
-  font-weight: bold;
-}
-
-button:hover {
-  color: #fb8985;
-}
-
 .logo {
   font-size: 27px;
   margin-right: 20px;
+}
+
+nav a {
+  margin-right: 15px;
 }
 
 .navItems {
