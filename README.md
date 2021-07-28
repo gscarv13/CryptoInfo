@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# CryptoInfo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is a website with the latest updates on crypto-currencies and latest crypto coins news
+> Built with React and Redux, Coinstats API, and chart.js 
 
-## Available Scripts
+![image](./demo/demo1.jpg)
 
-In the project directory, you can run:
+## Built With
 
-### `yarn start`
+- React
+- Redux
+- HTML
+- CSS
+- [Coinstats API](https://documenter.getpostman.com/view/5734027/RzZ6Hzr3)  
+- ESLint
+- Stylelint
+- Webpack
+- Node
+- Yarn
+- Jest
+- chart.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live version
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You can check the live version in [this link](https://gscarv13-cryptoinfo.netlify.app)
 
-### `yarn test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run this project locally, make sure you have the following installed:
 
-### `yarn build`
+- Node.js, more information [here](https://nodejs.org/en/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup and Install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Clone the repository `git clone https://github.com/gscarv13/bookstore-cms.git`
+- Move to the cloned repository `cd bookstore-cms`
+- Run `yarn install` to set up all dependencies
+- Run `yarn start` to initiate development server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Usage
 
-### `yarn eject`
+- Open your browser
+- Enter `localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Tests
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the tests, open the terminal and enter the following command,
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```terminal
+yarn test
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Then follow the instructions provided
 
-## Learn More
+## Authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Gustavo Carvalho**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- GitHub: [@gscarv13](https://github.com/gscarv13)
+- Twitter: [@Gscarv13](https://twitter.com/Gscarv13)
+- LinkedIn: [Gustavo Carvalho](www.linkedin.com/in/gscarv13)
 
-### Code Splitting
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions, issues, and feature requests are welcome!
 
-### Analyzing the Bundle Size
+Feel free to check the [issues page](https://github.com/gscarv13/react-catalogue/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Show your support
 
-### Making a Progressive Web App
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📝 License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](LICENSE) licensed.
