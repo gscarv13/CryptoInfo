@@ -3,7 +3,7 @@
 > This is a website with the latest updates on crypto-currencies and latest crypto coins news
 > Built with React and Redux, Coinstats API, and chart.js 
 
-![image](./demo/demo1.jpg)
+![image](./demo/demo1.png)
 
 ## Built With
 
@@ -33,7 +33,7 @@ To run this project locally, make sure you have the following installed:
 ### Setup and Install
 
 - Clone the repository `git clone https://github.com/gscarv13/bookstore-cms.git`
-- Move to the cloned repository `cd bookstore-cms`
+- Move to the cloned repository `cd CryptoInfo`
 - Run `yarn install` to set up all dependencies
 - Run `yarn start` to initiate development server
 
