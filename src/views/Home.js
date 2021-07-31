@@ -31,7 +31,7 @@ Home.defaultProps = {
         icon: 'icon',
         name: 'CICoin',
         symbol: '$$',
-        priceChange: 1,
+        priceChange1d: 1,
         price: 1,
       },
     ],
