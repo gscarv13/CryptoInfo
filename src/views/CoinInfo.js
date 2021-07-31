@@ -93,8 +93,16 @@ const CoinInfo = (props) => {
 };
 
 CoinInfo.propTypes = {
-  location: PropTypes.objectOf(PropTypes.object).isRequired,
-  match: PropTypes.objectOf(PropTypes.object).isRequired,
+  location: PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+    PropTypes.object,
+  ])).isRequired,
+  match: PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+    PropTypes.object,
+  ])).isRequired,
   currentFiat: PropTypes.objectOf(PropTypes.string),
 };
 

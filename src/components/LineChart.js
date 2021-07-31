@@ -45,7 +45,7 @@ const LineChart = (props) => {
       backgroundColor: '#1a1b24',
     }}
     >
-      <Line data={data} options={options} tooltip />
+      <Line data={data} options={options} />
     </div>
   );
 };
