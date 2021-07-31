@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 
@@ -60,15 +59,5 @@ describe('render <Coin />', () => {
   test('Should render details button', () => {
     const details = screen.getByText(/DETAILS/);
     expect(details).toBeInTheDocument();
-  });
-});
-
-describe('navigate to <CoinInfo />', () => {
-  test('Should display market status', async () => {
-    const link = screen.getByTestId('crypto-link-1');
-    await userEvent.click(link);
-    expect(screen.getByText(/Market Status/)).toBeInTheDocument();
-    expect(screen.getByText(/Useful Links/)).toBeInTheDocument();
-    expect(screen.getByTestId('chart')).toBeInTheDocument();
   });
 });
