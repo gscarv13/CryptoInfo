@@ -1,0 +1,41 @@
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: #2c2b32 1px solid;
+  border-radius: 15px;
+}
+
+tr td {
+  border-bottom: #34353e 1px solid;
+  padding: 15px;
+  text-align: center;
+}
+
+thead tr td:first-child {
+  border-top-left-radius: 15px;
+}
+
+thead tr td:last-child {
+  border-top-right-radius: 15px;
+}
+
+.Header {
+  width: 100%;
+  background-color: #13161a;
+  text-align: center;
+  height: 4rem;
+  font-size: 13px;
+}
+
+tr:hover {
+  background-color: #2c2b32;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}

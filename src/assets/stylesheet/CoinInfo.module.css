@@ -1,0 +1,77 @@
+.Title {
+  margin-left: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 85%;
+}
+
+.TitleInfoLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12rem;
+}
+
+.USD {
+  font-size: 10px;
+}
+
+.CoinInfoContainer {
+  width: 100%;
+  padding: 0 100px;
+}
+
+.Title img {
+  width: 40px;
+  height: 40px;
+}
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Main a {
+  text-decoration: none;
+}
+
+.Chart {
+  margin: 50px 0;
+  width: 90%;
+}
+
+.CoinDetails {
+  display: flex;
+  padding: 20px 3rem;
+  width: 100%;
+}
+
+.CoinDetails div {
+  margin: 0 15px;
+}
+
+h4 {
+  margin-bottom: 2rem;
+}
+
+.MarketInfo p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.PriceUsdContainer {
+  font-size: 32px;
+}
+
+.Links a {
+  color: #e5e4e8;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.Links a i {
+  margin-left: 5px;
+}

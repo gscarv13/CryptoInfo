@@ -1,0 +1,80 @@
+.Main {
+  width: 100%;
+  padding: 2rem 5rem;
+}
+
+.Grid {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.Card {
+  position: relative;
+  border: 3px solid #000;
+  border-radius: 15px;
+  margin: 10px;
+  width: 14rem;
+  height: 300px;
+  font-size: 12px;
+  padding: 0;
+}
+
+.Details {
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 1) 95%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: inherit;
+  padding: 0.7rem;
+  margin-bottom: -1px;
+}
+
+.Title {
+  font-weight: 500;
+}
+
+.Source {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Time {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  width: 60%;
+  border-radius: 15px 15px 0 15px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Time i {
+  margin-right: 5px;
+}
+
+.ReadMore {
+  background-color: #ff922f;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.ReadMore i {
+  margin-right: 5px;
+}
+
+.ReadMore a {
+  color: #000;
+  margin-left: 5px;
+}
+
+.ReadMore:hover,
+.ReadMore a:hover {
+  background-color: black;
+  color: #fff;
+}
